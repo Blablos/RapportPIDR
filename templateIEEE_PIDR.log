@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.10)  13 MAY 2017 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.10)  13 MAY 2017 21:14
 entering extended mode
 **./templateIEEE_PIDR.tex
 (templateIEEE_PIDR.tex
@@ -422,24 +422,29 @@ Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 (frenchb.ldf)                of your document, on input line 317.
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 413--414
-\OT1/ptm/m/n/10 ner, ra-dio), en arch[]eologie, en lu-the-rie, qu'en in-dus-tri
-e
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+[]\OT1/ptm/b/n/10 Mots-cl[]es : \OT1/ptm/m/n/10 tomographie, trans-form[]ee de 
+Ra-don,
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 415--416
+Underfull \hbox (badness 1874) in paragraph at lines 409--410
 []\OT1/ptm/m/n/10 En tomographie, il existe en r[]egle g[]en[]eral une par-
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 424.
+(Font)              <7> on input line 418.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 424.
+(Font)              <5> on input line 418.
+[1{C:/Users/Pierre-Arnaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 601.
+(Font)              <8> on input line 594.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 601.
+(Font)              <6> on input line 594.
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -451,33 +456,31 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{C:/Users/Pierre-Arnaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+[2
 
-
-]
-(templateIEEE_PIDR.aux) ) 
+] (templateIEEE_PIDR.aux) ) 
 Here is how much of TeX's memory you used:
- 2398 strings out of 493634
- 37512 string characters out of 3141289
- 110508 words of memory out of 3000000
- 5805 multiletter control sequences out of 15000+200000
+ 2400 strings out of 493634
+ 37535 string characters out of 3141289
+ 111508 words of memory out of 3000000
+ 5807 multiletter control sequences out of 15000+200000
  38757 words of font info for 72 fonts, out of 3000000 for 9000
  1029 hyphenation exceptions out of 8191
- 28i,7n,30p,517b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fon
-tname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on templateIEEE_PIDR.pdf (1 page, 103151 bytes).
+ 28i,7n,30p,967b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/f
+ontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on templateIEEE_PIDR.pdf (2 pages, 111178 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
+ 50 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

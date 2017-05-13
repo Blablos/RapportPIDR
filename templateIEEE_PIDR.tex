@@ -376,18 +376,12 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-Ici le résumé
-
+La tomographie est un moyen efficace de sonder la matière sans l'endommager, ce qui est très utile dans beaucoup de domaines. En rayonnant l'objet d'étude, une partie de l'énergie sera absorbé, cette transformée, mathématisé par Radon, formant ainsi l'image d'une superposition de sinusoïde, appelé sinogramme, inexploitable directement. 53 Pour y remédier, une rétroprojection filtrée est nécessaire, que nous avons appliqués sur des exemples théoriques (disque) et implémentés en Matlab puis en C. 76 Le code fut appliqués sur les fantômes de Shepp-Logann et nous avons obtenus un SNR de  ... pourcent. %96 mots
 \end{abstract}
 
 %keywords
-\textbf{keywords}
-\begin{itemize}
-\item tomographie
-\item transformée de Radon
-\item rétroprojection filtrée
-\item Matlab
-\end{itemize}
+\textbf{Mots-clés :} tomographie, transformée de Radon, rétroprojection filtrée, Matlab
+
 
 
 
@@ -408,13 +402,13 @@ Ici le résumé
 \section{Introduction}
 
 
-La tomographie, qui veut dire étymologiquement "dessiner une coupe" en grec, est une technique permettant d'obtenir des images de coupes d'objets ou d'être vivant à partir de rayonnement, en règle général de rayons X.
+La tomographie, qui veut dire étymologiquement "dessiner une coupe" en grec, est une technique permettant d'obtenir des images de coupes d'objets ou d'être vivant à partir de rayonnement, habituellement des rayons X.
 
-La tomographie est aussi bien utilisé en médecine (scanner, radio), en archéologie, en lutherie, qu'en industrie pétrochimique (tomographie géologique) ou bien nucléaire (étude d'élément radioactif non manipulable).
+La tomographie est un moyen très efficace de sonder la matière sans l'endommager. C'est pour cela qu'elle est utilisé aussi bien en médecine en imagerie médicale, en archéologie et en lutherie pour l'étude d'artéfacts et objets fragiles, en industrie pétrochimique pour l'étude du sous sol ou bien nucléaire pour l'étude d'élément radioactif non manipulable ou confiné. Les applications de la tomographies sont donc pluriels et importantes, d'où la nécessité de son étude, qui peut provoquer des retombés nombreuses.
 
-En tomographie, il existe en règle général une partie logicielle destinée à procéder à une reconstruction tri-dimensionnelle de l'objet étudié. En effet, l'image obtenue lors d'une tomographie n'est pas directement exploitable, l'image obtenue forme un ensemble de sinusoïde, appelé sinogramme. Mathématiquement parlant, le sinogramme est obtenue après une transformée de Radon de l'objet d'étude. Pour que l'image soit exploitable, il faut faire une reconstruction.
+En tomographie, il existe en règle général une partie logicielle destinée à procéder à une reconstruction tri-dimensionnelle de l'objet étudié. En effet, l'image obtenue lors d'une tomographie n'est pas directement exploitable. En effet elle forme une superposition de sinusoïdes, appelé sinogramme. En théorie, le sinogramme est obtenue après une transformée de Radon de l'objet d'étude. Pour que l'image soit exploitable par un être humain, il est nécessaire de faire une reconstruction. Il existe plusieurs méthodes différentes de reconstructions, nous nous intéresserons ici uniquement à la rétroprojection filtrée.
 
-Le but de  ce PIDR est donc d'établir une reconstruction d'une image en 2D, en commençant par l'image des fantômes de Shepp-Logan. On utilise pour cela un code Matlab, en utilisant la méthode de rétroprojection filtrée. Ensuite nous avons converti ce programme en C, un langage compilé, pour gagner du temps calcul.
+Le but de  ce PIDR est donc d'établir une reconstruction d'une image en 2D, en commençant par l'image des fantômes de Shepp-Logan. C'est une image d'un modèle humain créée par L.Shepp et B.F.Logan en 1974, qui sert de test pour les algorithmes de reconstructions.  On utilise pour cela un code Matlab en utilisant la méthode de rétroprojection filtrée. Cette méthode se déroule en quatre étapes. On applique une transformée de Fourier à l'image de départ, puis on filtre le résultat, on applique une transformée de Fourier inverse pour finalement on fait la rétroprojection. En plus des résultats de notre code, nous présenterons une application appliquée sur un disque. Ensuite nous avons converti ce programme en C, un langage compilé, pour gagner du temps calcul, car la complexité temporelle du code est assez importante, surtout que le nombre de données est imposant dès que l'image devient importante.
 
 \section{Explication Théorique}
 
@@ -422,8 +416,7 @@ Le but de  ce PIDR est donc d'établir une reconstruction d'une image en 2D, en 
 
 %TODO je n'aurais pas inversé I et I0 dans l'explication de la formule ??
 Lorsqu'on envoie des rayons X à travers un objet, ce dernier atténue une partie de l'énergie reçu.  Cette atténuation est linéaire, nous permettant d'avoir une formule simple de l'intensité émise ($I_0$) par rapport à la l'intensité reçu($I$) en intégrant l'atténuation linéaire sur une droite $D$ : $
-I=
-I_0 \cdot \exp(- \int_{D} f(x,y) dv )
+I=I_0 \cdot \exp(- \int_{D} f(x,y) dv )
 $ où $f(x,y)$ est l'atténuation au point $(x,y)$ de l'objet étudié. On cherche donc à reconstruire $f(x,y)$ en tout point de l'espace pour obtenir la coupe de l'objet étudié.
 
 Comme chaque mesure correspond à une droite $D$, le dispositif d'acquisition doit faire un balayage angulaire de l'objet à étudier pour obtenir l'ensemble des mesures permettant de reconstituer l'objet d'étude.
@@ -433,6 +426,8 @@ insérer ici des images de balayage si possible
 \subsection{Transformée de Radon}
 
 La transformée de Radon, qui correspond à l'opérateur des projections de f, donc de l'image que l'on obtient après une radiographie, forme une image appelée sinogramme.
+
+
 
 ...
 
@@ -564,10 +559,10 @@ ceci est une magnifique conclusion
 
 
 % use section* for acknowledgment
-\section*{Acknowledgment}
+\section*{Remerciement}
 
 
-
+j'aimerais remercier ma famille, pour m'avoir toujours soutenu, ma chienne car elle joue avec moi lorsque le travail devient trop dur et mon correcteur orthographique. Merci à vous ! :D
 
 
 
@@ -598,8 +593,8 @@ ceci est une magnifique conclusion
 \begin{thebibliography}{1}
 
 \bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+Papa et Maman, \emph{Notre Fils est génial !! \LaTeX}, 3rd~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Paris, France: ..., 2017
 
 \end{thebibliography}
 
