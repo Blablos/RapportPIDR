@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.10)  14 MAY 2017 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.10)  14 MAY 2017 17:09
 entering extended mode
 **./templateIEEE_PIDR.tex
 (templateIEEE_PIDR.tex
@@ -439,6 +439,18 @@ LaTeX Warning: Label `fig:gallery' multiply defined.
 
 LaTeX Warning: Label `fig:gallery' multiply defined.
 
+
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
+
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
+
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
+
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
 )
 \openout1 = `templateIEEE_PIDR.aux'.
 
@@ -485,25 +497,30 @@ Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 \everyMPtoPDFconversion=\toks22
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 381.
+(Font)              <9> on input line 380.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 381.
+(Font)              <6> on input line 380.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 381.
+(Font)              <5> on input line 380.
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 []\OT1/ptm/b/n/10 Mots-cl[]es : \OT1/ptm/m/n/10 tomographie, trans-form[]ee de 
 Ra-don,
  []
 
 
-Underfull \hbox (badness 3942) in paragraph at lines 406--413
-[]\OT1/ptm/b/n/10 contexte g[]en[]eral : \OT1/ptm/m/n/10 La tomographie, qui ve
+Underfull \hbox (badness 3128) in paragraph at lines 405--416
+[]\OT1/ptm/b/n/10 Contexte g[]en[]eral : \OT1/ptm/m/n/10 La tomographie, qui ve
 ut dire
  []
 
+
+Underfull \hbox (badness 1881) in paragraph at lines 405--416
+\OT1/ptm/m/n/10 et les m[]ethodes de re-cons-truc-tions math[]ematiques exis-
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 419.
+(Font)              <7> on input line 422.
 [1{C:/Users/Pierre-Arnaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
@@ -512,33 +529,37 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: sinogrammeExemple.png Graphic file (type png)
 
 <use sinogrammeExemple.png>
-Package pdftex.def Info: sinogrammeExemple.png used on input line 435.
+Package pdftex.def Info: sinogrammeExemple.png used on input line 438.
 (pdftex.def)             Requested size: 164.21059pt x 185.8912pt.
 
 <Shepp-logan.jpg, id=17, 332.74312pt x 277.78781pt>
 File: Shepp-logan.jpg Graphic file (type jpg)
  <use Shepp-logan.jpg>
-Package pdftex.def Info: Shepp-logan.jpg used on input line 465.
+Package pdftex.def Info: Shepp-logan.jpg used on input line 467.
 (pdftex.def)             Requested size: 232.91858pt x 194.45012pt.
-
-Underfull \vbox (badness 3792) has occurred while \output is active []
-
 
 <sinogramme.jpg, id=18, 526.96875pt x 395.22656pt>
 File: sinogramme.jpg Graphic file (type jpg)
  <use sinogramme.jpg>
-Package pdftex.def Info: sinogramme.jpg used on input line 475.
-(pdftex.def)             Requested size: 210.78375pt x 158.08781pt.
+Package pdftex.def Info: sinogramme.jpg used on input line 477.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 477--478
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 486--487
+ \OT1/ptm/m/it/10 2) r[]etroprojection discr[]ete : [][] \OT1/ptm/b/n/10 Filtre
+ de l'image : \OT1/ptm/m/n/10 La
+ []
 
 <filtre-de-Ram-Lak.jpg, id=19, 526.96875pt x 395.22656pt>
 File: filtre-de-Ram-Lak.jpg Graphic file (type jpg)
 
 <use filtre-de-Ram-Lak.jpg>
-Package pdftex.def Info: filtre-de-Ram-Lak.jpg used on input line 488.
+Package pdftex.def Info: filtre-de-Ram-Lak.jpg used on input line 490.
 (pdftex.def)             Requested size: 210.78375pt x 158.08781pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [2 <./sinogrammeExemple.png (PNG copy)> <./Shepp-logan.jpg> <./sinogramme.jpg>
 ]
 <rsultat-de-la-rtroprojetion-filtre.jpg, id=24, 526.96875pt x 395.22656pt>
@@ -546,10 +567,58 @@ File: rsultat-de-la-rtroprojetion-filtre.jpg Graphic file (type jpg)
 
 <use rsultat-de-la-rtroprojetion-filtre.jpg>
 Package pdftex.def Info: rsultat-de-la-rtroprojetion-filtre.jpg used on input l
-ine 503.
-(pdftex.def)             Requested size: 210.78375pt x 158.08781pt.
+ine 506.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 506--507
+ [][] 
+ []
+
+<t512-p1.jpg, id=25, 526.96875pt x 395.22656pt>
+File: t512-p1.jpg Graphic file (type jpg)
+ <use t512-p1.jpg>
+Package pdftex.def Info: t512-p1.jpg used on input line 526.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 526--527
+ [][] 
+ []
+
+<t512-p4.jpg, id=26, 526.96875pt x 395.22656pt>
+File: t512-p4.jpg Graphic file (type jpg)
+ <use t512-p4.jpg>
+Package pdftex.def Info: t512-p4.jpg used on input line 535.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 535--536
+ [][] 
+ []
+
+<t512-p16.jpg, id=27, 526.96875pt x 395.22656pt>
+File: t512-p16.jpg Graphic file (type jpg)
+ <use t512-p16.jpg>
+Package pdftex.def Info: t512-p16.jpg used on input line 544.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 544--545
+ [][] 
+ []
+
+[3 <./filtre-de-Ram-Lak.jpg> <./rsultat-de-la-rtroprojetion-filtre.jpg> <./t512
+-p1.jpg> <./t512-p4.jpg>] <t2048-p1.jpg, id=33, 526.96875pt x 395.22656pt>
+File: t2048-p1.jpg Graphic file (type jpg)
+
+<use t2048-p1.jpg>
+Package pdftex.def Info: t2048-p1.jpg used on input line 554.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 554--555
+ [][] 
+ []
+
+[4 <./t512-p16.jpg> <./t2048-p1.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 658.
+(Font)              <8> on input line 715.
 
 
 ** Conference Paper **
@@ -562,38 +631,38 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
+[5
 
- <./filtre-de-Ram-Lak.jpg> <./rsultat-de-la-rtroprojetion-filtre.jpg>]
-(templateIEEE_PIDR.aux)
+] (templateIEEE_PIDR.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3365 strings out of 493634
- 50927 string characters out of 3141289
+ 3386 strings out of 493634
+ 51241 string characters out of 3141289
  126764 words of memory out of 3000000
- 6730 multiletter control sequences out of 15000+200000
+ 6747 multiletter control sequences out of 15000+200000
  41393 words of font info for 77 fonts, out of 3000000 for 9000
  1029 hyphenation exceptions out of 8191
- 28i,7n,30p,1179b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,7n,30p,1148b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on templateIEEE_PIDR.pdf (3 pages, 421365 bytes).
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
+/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utm
+r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on templateIEEE_PIDR.pdf (5 pages, 810479 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
