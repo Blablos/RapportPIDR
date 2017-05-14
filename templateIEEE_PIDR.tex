@@ -331,10 +331,10 @@
 % use a multiple column layout for up to three different
 % affiliations
 \author{\IEEEauthorblockN{Abel Quérou}
-\IEEEauthorblockA{Elève ingénieur en 2ième année\\ à Télécom Nancy}
+\IEEEauthorblockA{Elève ingénieur en 2ème année\\ à Télécom Nancy}
 \and
 \IEEEauthorblockN{Pierre-Arnaud Blanc}
-\IEEEauthorblockA{Elève ingénieur en 2ième année\\ à Télécom Nancy}
+\IEEEauthorblockA{Elève ingénieur en 2ème année\\ à Télécom Nancy}
 \and
 \IEEEauthorblockN{Jean-Baptiste Bellet}
 \IEEEauthorblockA{chercheur-encadrant PIDR\\Institut Elie Cartan de Lorraine}
@@ -377,7 +377,7 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-La tomographie est un moyen efficace de sonder la matière sans l’endommager, ce qui est très utile dans beaucoup de domaines. L’objet à étudier est déplacé (rotation, translation verticale) à l'intérieur d'un faisceau de rayonnement pénétrant. Une partie de l’énergie sera absorbée et chaque traversée du faisceau donne un point, formant ainsi l’image d’une superposition de sinusoïdes, appelée "sinogramme", inexploitable directement. Une transformation mathématique, dite de Radon, est nécessaire pour revenir à la forme de l’objet initial. Dans notre étude, nous avons appliqué une « rétroprojection filtrée » d’abord sur des exemples théoriques (disque) et l’avons ensuite implémentée en Matlab, puis en langage C. Enfin, notre code fut appliqué sur les fantômes de Shepp-Logann et nous avons obtenus un SNR de … pour cent. %132 mots
+La tomographie est un moyen efficace de sonder la matière sans l’endommager, ce qui est très utile dans beaucoup de domaines. L’objet à étudier est déplacé (rotation, translation verticale) à l'intérieur d'un faisceau de rayonnement pénétrant. Une partie de l’énergie sera absorbée et chaque traversée du faisceau donne un point, formant ainsi l’image d’une superposition de sinusoïdes, appelée "sinogramme", inexploitable directement. Une transformation mathématique, dite de Radon, est nécessaire pour revenir à la forme de l’objet initial. Dans notre étude, nous avons appliqué une « rétroprojection filtrée » d’abord sur des exemples théoriques (disque) et l’avons ensuite implémentée en Matlab, puis en langage C. Enfin, notre code fut appliqué sur les fantômes de Shepp-Logann et nous avons obtenus un PNSR de 12,56. %132 mots
 \end{abstract}
 
 %keywords
@@ -404,7 +404,7 @@ La tomographie est un moyen efficace de sonder la matière sans l’endommager, 
 
 \textbf{Contexte général :}
 La tomographie, qui veut dire étymologiquement ”dessiner une coupe” en grec, est une technique permettant d’obtenir des images de coupes d’objets ou d’êtres vivants à partir d'un rayonnement, habituellement des rayons X. Son histoire est intiment liée à celle de l’imagerie médicale, qui va se développer à partir de 1896 avec l’utilisation des rayons X. Mais les simples radiographies sont limitées, car elles ne prennent pas en compte la structure tridimensionnelle du corps humain. Pour pallier ce problème, le scanner est créé en 1971 par Godfrey Hounsfield et ses collègues à l’EMI Group de Londres (les producteurs des Beatles). Cette avancée majeure de l’imagerie médicale n’a pu aboutir que par la remise au goût du jour des travaux du mathématicien austro-hongrois Johann Radon en 1917 sur la théorie de la transformée qui porte maintenant son nom. Cette théorie trouvera donc son application 60 ans plus tard.
-La tomographie est un moyen très efficace de sonder la matière sans l’endommager. C’est pour cela qu’elle est utilisée aussi bien en médecine en imagerie médicale, en archéologie et en lutherie pour l’étude d’artéfacts et d’objets fragiles, en industrie pétrochimique pour l’étude du sous-sol ou bien dans le domaine nucléaire pour l’étude d’éléments radioactifs non manipulables ou confinés. Les applications de la tomographies sont donc plurielles et importantes, ce qui a entrainé des études importantes, avec de nombreuses retombées.
+La tomographie est un moyen très efficace de sonder la matière sans l’endommager. C’est pour cela qu’elle est utilisée aussi bien en médecine en imagerie médicale, en archéologie et en lutherie pour l’étude d’artéfacts et d’objets fragiles, en industrie pétrochimique pour l’étude du sous-sol ou bien dans le domaine nucléaire pour l’étude d’éléments radioactifs non manipulables ou confinés. Les applications de la tomographie sont donc plurielles et importantes, ce qui a entrainé des études multiples, avec de nombreuses retombées.
 \\
 \textbf{Problématique :}
 La tomographie nécessite donc une partie logicielle destinée à procéder à une reconstruction tridimensionnelle de l’objet étudié. En effet, l’image obtenue lors d’une tomographie n’est pas directement exploitable : elle est formée d’une superposition de sinusoïdes, appelée sinogramme. En théorie, le sinogramme est obtenu après une transformée de Radon de l’objet d’étude. Pour que l’image soit lisible et exploitable par un être humain, il est nécessaire de faire une reconstruction. Il existe plusieurs méthodes différentes de reconstruction, mais nous nous intéresserons ici uniquement à la rétro-projection filtrée.
@@ -419,7 +419,7 @@ Notre méthode de rétro-projection filtrée, qui sera codée en langage Matlab,
 \subsection{Principe physique pour acquérir l'image tomographique}
 
 %TODO je n'aurais pas inversé I et I0 dans l'explication de la formule ??
-Lorsqu'on envoie des rayons X à travers un objet, ce dernier atténue une partie de l'énergie reçue.  Cette atténuation est linéaire, nous permettant d'avoir une formule simple de l'intensité reçue ($I_0$) par rapport à l'intensité émise ($I$) en intégrant l'atténuation linéaire sur une droite $D$ : $
+Lorsqu'on envoie des rayons X à travers un objet, ce dernier atténue une partie de l'énergie reçue.  Cette atténuation est linéaire, nous permettant d'avoir une formule simple de l'intensité reçue ($I$) par rapport à l'intensité émise ($I_0$) en intégrant l'atténuation linéaire sur une droite $D$ : $
 I=I_0 \cdot \exp(- \int_{D} f(x,y) dv )
 $.
 L’intensité reçue donne une mesure intégrale de la « densité » des différentes couches traversées par le faisceau de rayonnement lors de sa traversée de l’objet. S’il s’agit d’un corps humain, par exemple, cette densité va varier selon que le faisceau traverse des masses osseuses, du tissu mou ou des cavités.
@@ -452,15 +452,13 @@ $=\int_{D_\theta} f(u\cos\theta-v\sin\theta, u\sin\theta+v\cos\theta)dv$
 \textbf{A COMPLETER}
 
 
-\section{Le code en pratique}
+\section{résultat de nos codes}
 
-\subsection{le code Matlab}
+\subsection{notre code en langage Matlab}
 
 \subsubsection{la génération de données }
 
-L'objet d'étude que nous avons utilisés dans un premier temps sont les images d'un modèle humain, les fantômes de L. Shepp et B.F. Logan créée par  en 1974, qui sert de test pour les algorithmes de reconstructions.
-
-Nous avons utilisés dans un premier temps comme objets d'étude les images d'un modèle humain appelés les fantômes de Shepp-Logan. Créée par ces derniers en 1974, qui servent de test pour les algorithmes de reconstructions (Fig.2).
+Nous avons utilisé dans un premier temps comme objets d'étude les images d'un modèle humain appelées les fantômes de Shepp-Logan. Créées par ces derniers en 1974, qui servent de test pour les algorithmes de reconstructions (Fig.2).
 
 \begin{figure}[H]
 \centering
@@ -483,7 +481,7 @@ En sortie de la transformée de Radon, nous obtenons une matrice R qui regroupe 
 
 \subsubsection{rétroprojection discrète }
 
-\textbf{Filtre de l'image :} La première étape est d'appliquer une transformée de Fourier à la matrice R résultante de la transformée de Radon de Matlab. Ensuite nous avons ensuite créé le filtre de Ram-Lak (Fig.4). \textbf{Explication pourquoi utiliser ce filtre et comment il marche.}
+\textbf{Filtre de l'image :} La première étape consiste à appliquer une transformée de Fourier à la matrice R résultante de la transformée de Radon de Matlab. Ensuite nous avons ensuite créé et utilisé un filtre de Ram-Lak (Fig.4). Ce filtre a trois avantages majeurs : (i)il est simple à implémenter (deux rampes) et (ii)s'effectue rapidement, donc on gagne en temps de calcul pour la reconstruction, et qu'il (iii)atténue efficacement le bruit sans trop lisser l'image.
 
 \begin{figure}[H]
 \centering
@@ -495,11 +493,13 @@ En sortie de la transformée de Radon, nous obtenons une matrice R qui regroupe 
 On applique le filtre à la matrice R par multiplication et appliquons au résultat une transformée de Fourier inverse.
 
 \textbf{rétroprojection :} On crée une matrice B de la taille de R qui recueillera l'image résultat. En bouclant sur les colonnes de R, donc chaque angle de mesure, on détermine les projections $u$ avec la formule suivante :
-$u=(((x-R_x)/2)*\cos(rad)-((y-R_y)/2)*\sin(rad))+xp_offset$
-avec $(x,y)$ les points de B, $R_x$ et $R_y$ la taille de R, $rad$ l'angle en radian de l'axe de projection et $xp_offset$ le décalage.
+$u=(((x-R_x)/2)*\cos(rad)-((y-R_y)/2)*\sin(rad))+xp_{offset}$
+avec $(x,y)$ les points de B, $R_x$ et $R_y$ la taille de R, $rad$ l'angle en radian de l'axe de projection et $xp_{offset}$ le décalage.
 Pour être sûr que les projections $u$ soient entières, nous appliquons une interpolation de Taylor.
 Nous utilisons finalement une LUT pour restreindre les valeurs résultats dans l'ensemble [0;255].
-On rappelle qu'une Look-Up Table (LUT) est utilisé en traitement d'image pour établir une correspondance entre les valeurs des points et les couleurs affichées.
+On rappelle qu'une Look-Up Table (LUT) est utilisée en traitement d'image pour établir une correspondance entre les valeurs des points et les couleurs affichées.
+
+L'image ci-après (Fig.5) montre que nous avons bien obtenus un résultat du fantôme de départ. Il nous faut maintenant évaluer sa qualité.
 
 \begin{figure}[H]
 \centering
@@ -508,8 +508,6 @@ On rappelle qu'une Look-Up Table (LUT) est utilisé en traitement d'image pour �
 \label{fig:gallery}
 \end{figure}
 
-
-
 \subsubsection{quantification et évaluation des résultats}
 
 Pour évaluer les images obtenus, nous avons utilisés le ratio PSNR (Peak Signal to Noise Ratio), qui se calcule de la manière suivante :
@@ -517,7 +515,7 @@ $PSNR=10\cdot\log_{10} (\frac{d^2}{EQM})$
 où $EQM$ est l'erreur quadratique moyenne qui s'obtient par la formule suivante :
 $EQM=\frac{1}{mn}\sum_{i=0}^{m-1}\sum_{j=0}^{n-1}(I_0(i,j)-I_f(i,j))^2$
 où $I_0$ est l'image originale et $I_f$ l'image finale.
-Ce ratio est la manière classique d'évaluer en traitement de l'image les distorsions par rapport à l'image d'origine.
+Ce ratio est la manière classique d'évaluer en traitement de l'image les distorsions par rapport à l'image d'origine. Plus ce ratio augmente, plus l'image est de bonne qualité.
 
 Ainsi nous pouvons faire varier la qualité de l'image résultante de la rétroprojection en modifiant la taille de l'image en pixels ou le pas angulaire des rayonnements simulés.
 
@@ -528,7 +526,10 @@ Ainsi nous pouvons faire varier la qualité de l'image résultante de la rétrop
 \label{fig:gallery}
 \end{figure}
 
-Pour la Fig.6, on observe une image assez proche de l'original, avec un $PSNR=11.26$. Cette image est tout à fait interpretable par un humain, à la différence du sinogramme.
+Pour la Fig.6, avec une pas angulaire de 1 et une image à 512 pixels, on observe une image assez proche de l'original, avec un $PSNR=11.26$. Cette image est tout à fait interpretable par un humain, à la différence du sinogramme.
+
+\textbf{3.1: influence du pas :}
+Observons maintenant l'influence du pas angulaire dans les figures suivantes :
 
 \begin{figure}[H]
 \centering
@@ -537,7 +538,7 @@ Pour la Fig.6, on observe une image assez proche de l'original, avec un $PSNR=11
 \label{fig:gallery}
 \end{figure}
 
-Ici l'image de la Fig7. a un pas angulaire de 4. Des lignes parasites dù à un trop grand pas angulaire apparaissent. Le PSNR diminue à 8.32.
+Ici l'image de la Fig.7 a un pas angulaire de 4. Des lignes parasites dues à un trop grand pas angulaire apparaissent. Le PSNR diminue à 8.32.
 
 \begin{figure}[H]
 \centering
@@ -546,8 +547,11 @@ Ici l'image de la Fig7. a un pas angulaire de 4. Des lignes parasites dù à un 
 \label{fig:gallery}
 \end{figure}
 
-En augmentant encore le pas angulaire jusqu'à 16, on observe que l'image de la Fig.8 devient quasiment inexploitable, qu'elle part nettement en contraste et que les lignes parasites sont encore plus nombreuses. Le PSNR chute à 6.37.
-
+En augmentant encore le pas angulaire jusqu'à 16, on observe que l'image de la Fig.8 devient quasiment inexploitable, qu'elle perd nettement en contraste et que les lignes parasites sont encore plus nombreuses. Le PSNR chute à 6.37.
+\\
+\\
+\textbf{3.2 influence de la taille : }
+Observons maintenant l'influence de la taille sur sa qualité.
 
 \begin{figure}[H]
 \centering
@@ -556,18 +560,46 @@ En augmentant encore le pas angulaire jusqu'à 16, on observe que l'image de la 
 \label{fig:gallery}
 \end{figure}
 
-Finalement, cette image (Fig.9) a un pas angulaire de 1 comme la Fig.6, mais à une taille plus grande de 2048 pixels. Le PSNR de 9.56 est plus bas que la Fig.6, mais cela s'explique par le fait qu'on a augmenté la taille de l'image, sans pour autant augmenter le pas angulaire, aboutissant pour un même pas angulaire à un résultat moins efficace.
+Cette image (Fig.9) a un pas angulaire de 1 comme la Fig.6, mais à une taille plus grande de 2048 pixels. Le PSNR de 9.56 est plus bas que la Fig.6, mais cela s'explique par le fait qu'on a augmenté la taille de l'image, sans pour autant augmenter le pas angulaire, aboutissant pour un même pas angulaire à un résultat moins efficace.
+\\
+\\
+\textbf{Optimisation en fonction de la taille et du pas : }
+Pour voir l'influence de ces paramètres, nous avons calculé le PSNR sur 1000 images, de taille allant de 1 pixels à 1000, avec un pas variant lui aussi.
 
-Le pas angulaire semble donc être le paramètre le plus sensible sur la qualité du rendu. Dés qu'on prends un pas angulaire supérieur à 1 radian, la dégradation de l'image s'accentue à toute vitesse.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.35]{PSNR2}
+	\caption[PSNR en fonction du pas]{PSNR en fonction du pas}
+\label{fig:gallery}
+\end{figure}
 
-\textbf{A COMPLETER, RAJOUTER GRAPHE PSNR et blabla à améliorer}
+La Fig.10 montre la variation du PSNR d'une image de 256 pixels en fonction du pas angulaire. On remarque qu'il diminue drastiquement juqu'à 10 rad, puis qu'il se stabilise.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{PSNR3}
+	\caption[PSNR en fonction de la taille]{PSNR en fonction de la taille}
+\label{fig:gallery}
+\end{figure}
 
-\subsection{le code C}
+La Fig.11 permet d'observer que le PSNR diminue légèrement avec l'augmentation de la taille de l'image pour un pas fixe de 1. Pour les images les plus petites, le PSNR n'a pas de réel sens, car les images sont tellement petites que la variation angulaire n'a plus de sens.
 
-Le code C que nous avons écrits et équivalent algorithmiquement au code Matlab. Notre plus grande difficultés fut de remplacer des fonctions pré établi dans Matlab par des libraires équivalentes.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.30]{PSNR}
+	\caption[PSNR en fonction de la taille et du pas]{PSNR en fonction de la taille et du pas}
+\label{fig:gallery}
+\end{figure}
 
-\textbf{A COMPLETER}
+Enfin nous avons fait un graphe (Fig.12) qui étudie la variation des deux paramètres à la fois. Pour plus de lisibilité, cette figure se trouve également en annexe.
+ 
+Le pas angulaire semble donc être le paramètre le plus sensible sur la qualité du rendu. Dès qu'on prend un pas angulaire supérieur à 1 radian, la dégradation de l'image très rapidement.
+
+\subsection{Notre code en langage C}
+
+Le code que nous avons écrit en langage C est équivalent algorithmiquement au code Matlab. Notre plus grande difficulté fut de remplacer des fonctions pré-établies dans Matlab par des librairies équivalentes.
+
+\textbf{A COMPLETER, notamment temps de calcul}
 
 
 % An example of a floating figure using the graphicx package.
@@ -669,9 +701,9 @@ Le code C que nous avons écrits et équivalent algorithmiquement au code Matlab
 
 \section{Conclusion}
 
-Comme expliqué dans cet article, nous avons appliqué une « rétroprojection filtrée » d’abord sur des exemples théoriques (disque) et l’avons ensuite implémentée en Matlab, puis en langage C. Enfin, notre code fut appliqué sur les fantômes de Shepp-Logann en fesant varier le pas angulaire et la dimension de l'image. Les PNSR varie pour un pas de 1 radian entre 12.41 pour une image de 64 pixels et 9.56 une image de 2048 pixels et varie pour une image à 512 pixels entre 11.28 pour un pas de 1 et 6.1 pour un pas de radian. On remarque aussi que le pas augulaire joue beaucoup plus sur l'interprétation humaine de l'image résultante que la dimension de l'image. Les temps de calculs sont prohibitifs dès que les dimensions des images calculés deviennent très importantes. En effet, pour un test sur des images de .... pixels, nous avons pris près de 8h pour effectuer l'ensemble des calculs (rétroprojection+PSNR). Notre code doit être optimisé si l'on veut l'appliquer à des images conséquentes et reste à tester sur des sinogrammes d'acquisition d'objets d'études réels. 
+Comme expliqué dans cet article, nous avons appliqué une « rétroprojection filtrée » d’abord sur des exemples théoriques (disque) et l’avons ensuite implémentée en Matlab, puis en langage C. Enfin, notre code fut appliqué sur les fantômes de Shepp-Logann en faisant varier le pas angulaire et la dimension de l'image. Les PSNR varient pour un pas de 1 radian entre 12.41 pour une image de 64 pixels et 9.56 une image de 2048 pixels et varient pour une image à 512 pixels entre 11.28 pour un pas de 1 et 6.1 pour un pas de radian. On remarque aussi que le pas angulaire joue beaucoup plus sur l'interprétation humaine de l'image résultante que la dimension de l'image. Les temps de calculs sont prohibitifs dès que les dimensions des images calculées deviennent très importantes. En effet, pour un test sur 1000 images de 1 à 1000 pixels avec un pas variant de 1 à 90, il nous a fallu près de 8h pour effectuer l'ensemble des calculs (rétroprojection+PSNR). Notre code doit être optimisé si l'on veut l'appliquer à des images conséquentes et reste à tester sur des sinogrammes d'acquisition d'objets d'études réels. 
 \\
-L'étude de la tomographie et de la rétroprojection filtrée fut instructives pour nous lors de la réalisation de ce PIDR.
+L'étude de la tomographie et de la rétroprojection filtrée fut instructive pour nous lors de la réalisation de ce PIDR.
 
 \textbf{A compléter}
 
@@ -684,7 +716,10 @@ L'étude de la tomographie et de la rétroprojection filtrée fut instructives p
 % use section* for acknowledgment
 \section*{Remerciement}
 
-Nous tenons à remercier notre encadrant PIDR, qui a été présent durant ces 5 mois d'étude pour répondre à nos questions, nous conseiller sur certains choix à prendre. Son expertise dans le domaine de la tomographie a su nous orienter lors de la quinzaine de réunion téléphonique que nous avons eu les mercredis de cette année. Le sujet qu'il nous a proposé fut riche d'enseignement et instructif pour nous deux.
+Nous tenons à remercier notre encadrant PIDR, M. Bellet, qui a été présent durant ces 5 mois d'étude pour répondre à nos questions, nous conseiller sur certains choix à prendre. Son expertise dans le domaine de la tomographie a su nous orienter lors de la quinzaine de réunions téléphoniques que nous avons eu les mercredis de cette année. Le sujet qu'il nous a proposé fut riche d'enseignement et instructif pour nous deux.
+\\
+\\
+Nous tenons à remercier également M. Bombardier, professeur de Traitement Numérique de l'Image à Télécom Nancy en deuxième année, car son cours fut particulièrement utile par comprendre les traitements que nous avons dû effectuer sur nos images et analyser nos images résultantes.
 
 
 % trigger a \newpage just before the given reference
@@ -716,6 +751,15 @@ Papa et Maman, \emph{Notre Fils est génial !! \LaTeX}, 3rd~ed.\hskip 1em plus
   0.5em minus 0.4em\relax Paris, France: ..., 2017
 
 \end{thebibliography}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{PSNR}
+	\caption[PSNR en fonction de la taille et du pas]{PSNR en fonction de la taille et du pas}
+\label{fig:gallery}
+\end{figure}
+\textbf{TODO : A mettre à la verticale et meuilleur qualité}
 
 
 
