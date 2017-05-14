@@ -308,6 +308,8 @@
 % to submit to, of course. )
 
 \usepackage[french]{babel}
+\usepackage{float}
+\usepackage{graphicx}
 
 
 % correct bad hyphenation here
@@ -376,7 +378,7 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-La tomographie est un moyen efficace de sonder la matière sans l'endommager, ce qui est très utile dans beaucoup de domaines. En rayonnant l'objet d'étude, une partie de l'énergie sera absorbé, cette transformée, mathématisé par Radon, formant ainsi l'image d'une superposition de sinusoïde, appelé sinogramme, inexploitable directement. 53 Pour y remédier, une rétroprojection filtrée est nécessaire, que nous avons appliqués sur des exemples théoriques (disque) et implémentés en Matlab puis en C. 76 Le code fut appliqués sur les fantômes de Shepp-Logann et nous avons obtenus un SNR de  ... pourcent. %96 mots
+La tomographie est un moyen efficace de sonder la matière sans l’endommager, ce qui est très utile dans beaucoup de domaines. L’objet à étudier est déplacé (rotation, translation verticale) à l'intérieur d'un faisceau de rayonnement pénétrant. Une partie de l’énergie sera absorbée et chaque traversée du faisceau donne un point, formant ainsi l’image d’une superposition de sinusoïdes, appelée "sinogramme", inexploitable directement. Une transformation mathématique, dite de Radon, est nécessaire pour revenir à la forme de l’objet initial. Dans notre étude, nous avons appliqué une « rétroprojection filtrée » d’abord sur des exemples théoriques (disque) et l’avons ensuite implémentée en Matlab, puis en langage C. Enfin, notre code fut appliqué sur les fantômes de Shepp-Logann et nous avons obtenus un SNR de … pour cent. %132 mots
 \end{abstract}
 
 %keywords
@@ -401,23 +403,24 @@ La tomographie est un moyen efficace de sonder la matière sans l'endommager, ce
 
 \section{Introduction}
 
-
-La tomographie, qui veut dire étymologiquement "dessiner une coupe" en grec, est une technique permettant d'obtenir des images de coupes d'objets ou d'être vivant à partir de rayonnement, habituellement des rayons X.
-
-La tomographie est un moyen très efficace de sonder la matière sans l'endommager. C'est pour cela qu'elle est utilisé aussi bien en médecine en imagerie médicale, en archéologie et en lutherie pour l'étude d'artéfacts et objets fragiles, en industrie pétrochimique pour l'étude du sous sol ou bien nucléaire pour l'étude d'élément radioactif non manipulable ou confiné. Les applications de la tomographies sont donc pluriels et importantes, d'où la nécessité de son étude, qui peut provoquer des retombés nombreuses.
-
-En tomographie, il existe en règle général une partie logicielle destinée à procéder à une reconstruction tri-dimensionnelle de l'objet étudié. En effet, l'image obtenue lors d'une tomographie n'est pas directement exploitable. En effet elle forme une superposition de sinusoïdes, appelé sinogramme. En théorie, le sinogramme est obtenue après une transformée de Radon de l'objet d'étude. Pour que l'image soit exploitable par un être humain, il est nécessaire de faire une reconstruction. Il existe plusieurs méthodes différentes de reconstructions, nous nous intéresserons ici uniquement à la rétroprojection filtrée.
-
-Le but de  ce PIDR est donc d'établir une reconstruction d'une image en 2D, en commençant par l'image des fantômes de Shepp-Logan. C'est une image d'un modèle humain créée par L.Shepp et B.F.Logan en 1974, qui sert de test pour les algorithmes de reconstructions.  On utilise pour cela un code Matlab en utilisant la méthode de rétroprojection filtrée. Cette méthode se déroule en quatre étapes. On applique une transformée de Fourier à l'image de départ, puis on filtre le résultat, on applique une transformée de Fourier inverse pour finalement on fait la rétroprojection. En plus des résultats de notre code, nous présenterons une application appliquée sur un disque. Ensuite nous avons converti ce programme en C, un langage compilé, pour gagner du temps calcul, car la complexité temporelle du code est assez importante, surtout que le nombre de données est imposant dès que l'image devient importante.
+\textbf{contexte général :}
+La tomographie, qui veut dire étymologiquement ”dessiner une coupe” en grec, est une technique permettant d’obtenir des images de coupes d’objets ou d’êtres vivants à partir d'un rayonnement, habituellement des rayons X. Son histoire est intiment liée à celle de l’imagerie médicale, qui va se développer à partir de 1896 avec l’utilisation des rayons X. Mais les simples radiographies sont limitées, car elles ne prennent pas en compte la structure tridimensionnelle du corps humain. Pour pallier ce problème, le scanner est créé en 1971 par Godfrey Hounsfield et ses collègues à l’EMI Group de Londres (les producteurs des Beatles). Cette avancée majeure de l’imagerie médicale n’a pu aboutir que par la remise au goût du jour des travaux du mathématicien austro-hongrois Johann Radon en 1917 sur la théorie de la transformée qui porte maintenant son nom. Cette théorie trouvera donc son application 60 ans plus tard.
+La tomographie est un moyen très efficace de sonder la matière sans l’endommager. C’est pour cela qu’elle est utilisée aussi bien en médecine en imagerie médicale, en archéologie et en lutherie pour l’étude d’artéfacts et d’objets fragiles, en industrie pétrochimique pour l’étude du sous-sol ou bien dans le domaine nucléaire pour l’étude d’éléments radioactifs non manipulables ou confinés. Les applications de la tomographies sont donc plurielles et importantes, ce qui a entrainé des études importantes, avec de nombreuses retombées.
+\textbf{Problématique :}
+La tomographie nécessite donc une partie logicielle destinée à procéder à une reconstruction tridimensionnelle de l’objet étudié. En effet, l’image obtenue lors d’une tomographie n’est pas directement exploitable : elle est formée d’une superposition de sinusoïdes, appelée sinogramme. En théorie, le sinogramme est obtenu après une transformée de Radon de l’objet d’étude. Pour que l’image soit lisible et exploitable par un être humain, il est nécessaire de faire une reconstruction. Il existe plusieurs méthodes différentes de reconstruction, mais nous nous intéresserons ici uniquement à la rétro-projection filtrée.
+\textbf{Approche proposée :}
+Le but de ce Projet Interdisciplinaire ou de Découverte de la Recherche (PIDR) est, après avoir effectué une recherche bibliographique sur la tomographie et les méthodes de reconstruction mathématiques existantes,  d’établir une reconstruction d’une image en 2D, en commençant par l’image des fantômes de Shepp-Logan. C’est une image d’un modèle humain créée par L. Shepp et B.F. Logan en 1974, qui sert de test pour les algorithmes de reconstructions. Notre méthode de rétro-projection filtrée, qui sera codée en langage Matlab, se déroule en quatre étapes : (i) on applique une transformée de Fourier à l’image de départ, (ii)  on filtre le résultat, (iii) on applique une transformée de Fourier inverse et (iv) finalement on réalise la rétroprojection. En plus des résultats de notre code, nous présenterons une application sur un disque. Dans un second temps, nous avons converti ce programme en C, un langage compilé, pour gagner du temps calcul, car la complexié temporelle du code est assez importante, car le nombre de données devient très élevé dès que l’image devient importante.
 
 \section{Explication Théorique}
 
 \subsection{Principe physique pour acquérir l'image tomographique}
 
 %TODO je n'aurais pas inversé I et I0 dans l'explication de la formule ??
-Lorsqu'on envoie des rayons X à travers un objet, ce dernier atténue une partie de l'énergie reçu.  Cette atténuation est linéaire, nous permettant d'avoir une formule simple de l'intensité émise ($I_0$) par rapport à la l'intensité reçu($I$) en intégrant l'atténuation linéaire sur une droite $D$ : $
+Lorsqu'on envoie des rayons X à travers un objet, ce dernier atténue une partie de l'énergie reçue.  Cette atténuation est linéaire, nous permettant d'avoir une formule simple de l'intensité reçue ($I_0$) par rapport à la l'intensité émise($I$) en intégrant l'atténuation linéaire sur une droite $D$ : $
 I=I_0 \cdot \exp(- \int_{D} f(x,y) dv )
-$ où $f(x,y)$ est l'atténuation au point $(x,y)$ de l'objet étudié. On cherche donc à reconstruire $f(x,y)$ en tout point de l'espace pour obtenir la coupe de l'objet étudié.
+$
+L’intensité reçue donne une mesure intégrale de la « densité » des différente couches traversées par le faisceau de rayonnement lors de sa traversée de l’objet. S’il s’agit d’un corps humain, par exemple, cette densité va varier selon que le faisceau traverse des masses osseuses, du tissus mou ou des cavités.
+On cherche donc à reconstruire $f(x,y)$ en tout point de l’espace pour obtenir la coupe de l’objet étudié.
 
 Comme chaque mesure correspond à une droite $D$, le dispositif d'acquisition doit faire un balayage angulaire de l'objet à étudier pour obtenir l'ensemble des mesures permettant de reconstituer l'objet d'étude.
 
@@ -425,9 +428,19 @@ insérer ici des images de balayage si possible
 
 \subsection{Transformée de Radon}
 
-La transformée de Radon, qui correspond à l'opérateur des projections de f, donc de l'image que l'on obtient après une radiographie, forme une image appelée sinogramme.
+La transformée de Radon, qui correspond à l'opérateur des projections de f, donc de l'image que l'on obtient après une radiographie, forme une image appelée sinogramme. 
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{sinogrammeExemple}
+\caption[Exemple de sinogramme]{Exemple de sinogramme}
+\label{fig:gallery}
+\end{figure}
 
+La transformée de Radon s'exprime par la relation suivante :
+$R[f](u,\theta)=p_\theta(u)$
+\\%
+$=\int_{D_\theta} f(u\cos\theta-v\sin\theta, u\sin\theta+v\cos\theta)dv$
 
 ...
 
@@ -440,11 +453,62 @@ Ici je parle de rétroprojection filtrée
 
 \section{Le code en pratique}
 
-ici on parle du code
 
-...
+\subsection{le code Matlab}
+
+\subsubsection{la génération de données}
+
+L'objet d'étude que nous avons utilisés dans un premier temps sont les images d'un modèle humain, les fantômes de L. Shepp et B.F. Logan créée par  en 1974, qui sert de test pour les algorithmes de reconstructions.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Shepp-logan}
+\caption[fantômes de Shepp-Logan]{fantômes de Shepp-Logan}
+\label{fig:gallery}
+\end{figure}
+
+Pour modéliser la phase rayonnement pour obtenir le sinogramme sur lequel nous allons travailler pour la rétroprojection filtrée, nous avons appliqué la fonction Matlab de transformée de Radon. Cette fonction permet de choisir l'angle  de la prise ainsi que le nombre de mesure en fesant varier le pas de discrétisation.
+En sortie de la transformée de Radon, nous obtenons une matrice R qui regroupe l'ensemble des mesures récoltés par angle de prise et un vecteur xp qui regroupe l'angle choisi pour chaque colonne. Le sinogramme ainsi obtenu est le suivant :
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{sinogramme}
+\caption[sinogramme des fantômes de Shepp-Logan]{sinogramme des fantômes de Shepp-Logan}
+\label{fig:gallery}
+\end{figure}
 
 
+
+\subsubsection{rétroprojection discrète}
+
+\textbf{Filtre de l'image :} La première étape est d'appliquer une transformée de Fourier à la matrice R résultante de la transformée de Radon de Matlab. Ensuite nous avons ensuite créée le filtre de Ram-Lak.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{filtre-de-Ram-Lak}
+\caption[filtre de Ram-Lak]{filtre de Ram-Lak}
+\label{fig:gallery}
+\end{figure}
+
+On applique le filtre à la matrice R par multiplication et appliquons au résultat une transformée de Fourier inverse.
+
+\textbf{rétroprojection :} On crée une matrice B de la taille de R qui recueillera l'image résultat. En bouclant sur les colonnes de R, donc chaque angle de mesure, on détermine les projections $u$ avec la formule suivante :
+$u=(((x-R_x)/2)*\cos(rad)-((y-R_y)/2)*\sin(rad))+xp_offset$
+avec $(x,y)$ les points de B, $R_x$ et $R_y$ la taille de R, $rad$ l'angle en radian de l'axe de projection et $xp_offset$ le décalage.
+Pour être sûr que les projections $u$ soient entières, nous appliquons une interpolation de Taylor.
+Nous utilisons finalement une LUT pour restreindre les valeurs résultats dans l'ensemble [0;255].
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{rsultat-de-la-rtroprojetion-filtre}
+\caption[Résultat de la rétroprojetion filtrée]{Résultat de la rétroprojetion filtrée}
+\label{fig:gallery}
+\end{figure}
+
+
+\subsubsection{quantification et évaluation des résultats}
+
+\subsection{le code C}
 
 
 
@@ -561,9 +625,7 @@ ceci est une magnifique conclusion
 % use section* for acknowledgment
 \section*{Remerciement}
 
-
-j'aimerais remercier ma famille, pour m'avoir toujours soutenu, ma chienne car elle joue avec moi lorsque le travail devient trop dur et mon correcteur orthographique. Merci à vous ! :D
-
+Nous tenons à remercier notre encadrant ...
 
 
 

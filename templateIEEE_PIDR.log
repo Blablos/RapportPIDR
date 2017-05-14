@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.10)  13 MAY 2017 21:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.10)  14 MAY 2017 13:51
 entering extended mode
 **./templateIEEE_PIDR.tex
 (templateIEEE_PIDR.tex
@@ -153,10 +153,46 @@ Package babel Info: Making ? an active character on input line 375.
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count99
+\float@exts=\toks17
+\float@box=\box28
+\@float@everytoks=\toks18
+\@floatcapt=\box29
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count100
+))
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
@@ -390,60 +426,130 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(templateIEEE_PIDR.aux)
+(templateIEEE_PIDR.aux
+
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
+
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
+
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
+
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
+)
 \openout1 = `templateIEEE_PIDR.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 317.
-LaTeX Font Info:    ... okay on input line 317.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 319.
+LaTeX Font Info:    ... okay on input line 319.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 319.
+LaTeX Font Info:    ... okay on input line 319.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 319.
+LaTeX Font Info:    ... okay on input line 319.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 319.
+LaTeX Font Info:    ... okay on input line 319.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 319.
+LaTeX Font Info:    ... okay on input line 319.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 319.
+LaTeX Font Info:    ... okay on input line 319.
 
 -- Lines per column: 56 (exact).
-LaTeX Info: Redefining \degres on input line 317.
+LaTeX Info: Redefining \degres on input line 319.
 
 Package frenchb.ldf Warning: Figures' and tables' captions might look like
 (frenchb.ldf)                `Figure 1:' which is wrong in French.
 (frenchb.ldf)                Check your class or packages to change this;
-(frenchb.ldf)                reported on input line 317.
+(frenchb.ldf)                reported on input line 319.
 
-LaTeX Info: Redefining \dots on input line 317.
-LaTeX Info: Redefining \up on input line 317.
+LaTeX Info: Redefining \dots on input line 319.
+LaTeX Info: Redefining \up on input line 319.
 
 Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 (frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(frenchb.ldf)                of your document, on input line 317.
+(frenchb.ldf)                of your document, on input line 319.
 
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count101
+\scratchdimen=\dimen131
+\scratchbox=\box30
+\nofMPsegments=\count102
+\nofMParguments=\count103
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count104
+\MPscratchDim=\dimen132
+\MPnumerator=\count105
+\makeMPintoPDFobject=\count106
+\everyMPtoPDFconversion=\toks22
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 381.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 381.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 381.
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
 []\OT1/ptm/b/n/10 Mots-cl[]es : \OT1/ptm/m/n/10 tomographie, trans-form[]ee de 
 Ra-don,
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 409--410
-[]\OT1/ptm/m/n/10 En tomographie, il existe en r[]egle g[]en[]eral une par-
+Underfull \hbox (badness 3942) in paragraph at lines 406--413
+[]\OT1/ptm/b/n/10 contexte g[]en[]eral : \OT1/ptm/m/n/10 La tomographie, qui ve
+ut dire
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 418.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 418.
+(Font)              <7> on input line 419.
 [1{C:/Users/Pierre-Arnaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
+<sinogrammeExemple.png, id=16, 410.53375pt x 464.73625pt>
+File: sinogrammeExemple.png Graphic file (type png)
+
+<use sinogrammeExemple.png>
+Package pdftex.def Info: sinogrammeExemple.png used on input line 435.
+(pdftex.def)             Requested size: 164.21059pt x 185.8912pt.
+
+<Shepp-logan.jpg, id=17, 332.74312pt x 277.78781pt>
+File: Shepp-logan.jpg Graphic file (type jpg)
+ <use Shepp-logan.jpg>
+Package pdftex.def Info: Shepp-logan.jpg used on input line 465.
+(pdftex.def)             Requested size: 232.91858pt x 194.45012pt.
+
+Underfull \vbox (badness 3792) has occurred while \output is active []
+
+
+<sinogramme.jpg, id=18, 526.96875pt x 395.22656pt>
+File: sinogramme.jpg Graphic file (type jpg)
+ <use sinogramme.jpg>
+Package pdftex.def Info: sinogramme.jpg used on input line 475.
+(pdftex.def)             Requested size: 210.78375pt x 158.08781pt.
+
+<filtre-de-Ram-Lak.jpg, id=19, 526.96875pt x 395.22656pt>
+File: filtre-de-Ram-Lak.jpg Graphic file (type jpg)
+
+<use filtre-de-Ram-Lak.jpg>
+Package pdftex.def Info: filtre-de-Ram-Lak.jpg used on input line 488.
+(pdftex.def)             Requested size: 210.78375pt x 158.08781pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./sinogrammeExemple.png (PNG copy)> <./Shepp-logan.jpg> <./sinogramme.jpg>
+]
+<rsultat-de-la-rtroprojetion-filtre.jpg, id=24, 526.96875pt x 395.22656pt>
+File: rsultat-de-la-rtroprojetion-filtre.jpg Graphic file (type jpg)
+
+<use rsultat-de-la-rtroprojetion-filtre.jpg>
+Package pdftex.def Info: rsultat-de-la-rtroprojetion-filtre.jpg used on input l
+ine 503.
+(pdftex.def)             Requested size: 210.78375pt x 158.08781pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 594.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 594.
+(Font)              <8> on input line 658.
 
 
 ** Conference Paper **
@@ -456,31 +562,38 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[3
 
-] (templateIEEE_PIDR.aux) ) 
+ <./filtre-de-Ram-Lak.jpg> <./rsultat-de-la-rtroprojetion-filtre.jpg>]
+(templateIEEE_PIDR.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2400 strings out of 493634
- 37535 string characters out of 3141289
- 111508 words of memory out of 3000000
- 5807 multiletter control sequences out of 15000+200000
- 38757 words of font info for 72 fonts, out of 3000000 for 9000
+ 3365 strings out of 493634
+ 50927 string characters out of 3141289
+ 126764 words of memory out of 3000000
+ 6730 multiletter control sequences out of 15000+200000
+ 41393 words of font info for 77 fonts, out of 3000000 for 9000
  1029 hyphenation exceptions out of 8191
- 28i,7n,30p,967b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/f
-ontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on templateIEEE_PIDR.pdf (2 pages, 111178 bytes).
+ 28i,7n,30p,1179b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/ti
+mes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on templateIEEE_PIDR.pdf (3 pages, 421365 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
