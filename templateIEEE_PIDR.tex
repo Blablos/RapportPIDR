@@ -310,6 +310,7 @@
 \usepackage[french]{babel}
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage{url}
 
 
 % correct bad hyphenation here
@@ -419,9 +420,9 @@ Notre méthode de rétro-projection filtrée, qui sera codée en langage Matlab,
 \subsection{Principe physique pour acquérir l'image tomographique}
 
 %TODO je n'aurais pas inversé I et I0 dans l'explication de la formule ??
-Lorsqu'on envoie des rayons X à travers un objet, ce dernier atténue une partie de l'énergie reçue.  Cette atténuation est linéaire, nous permettant d'avoir une formule simple de l'intensité reçue ($I$) par rapport à l'intensité émise ($I_0$) en intégrant l'atténuation linéaire sur une droite $D$ : $
+Lorsqu'on envoie des rayons X à travers un objet, ce dernier atténue une partie de l'énergie reçue.  Cette atténuation est linéaire, nous permettant d'avoir une formule simple de l'intensité reçue ($I$) par rapport à l'intensité émise ($I_0$) en intégrant l'atténuation linéaire sur une droite $D$ : \[
 I=I_0 \cdot \exp(- \int_{D} f(x,y) dv )
-$.
+\].
 L’intensité reçue donne une mesure intégrale de la « densité » des différentes couches traversées par le faisceau de rayonnement lors de sa traversée de l’objet. S’il s’agit d’un corps humain, par exemple, cette densité va varier selon que le faisceau traverse des masses osseuses, du tissu mou ou des cavités.
 On cherche donc à reconstruire $f(x,y)$ en tout point de l’espace pour obtenir la coupe de l’objet étudié.
 
@@ -441,15 +442,47 @@ La transformée de Radon, qui correspond à l'opérateur des projections de f, d
 \end{figure}
 
 La transformée de Radon s'exprime par la relation suivante :
-$R[f](u,\theta)=p_\theta(u)$
-\\%
-$=\int_{D_\theta} f(u\cos\theta-v\sin\theta, u\sin\theta+v\cos\theta)dv$
+\[R[f](u,\theta)=p_\theta(u)
+=\int_{D_\theta} f(u\cos\theta-v\sin\theta, u\sin\theta+v\cos\theta)dv\]
+en posant $p=x\cos\theta+y\sin\theta$ et $q=-x\sin\theta+y\cos\theta$, on peut aussi écrire la transformée de Radon de la manière suivante : \[\int_{-\infty}^{+\infty} f(p\cos\theta-q\sin\theta, p\sin\theta+q\cos\theta)\delta q\]
 
-\textbf{A COMPLETER}
+\textbf{A VERIFIER, NOTAMMENT SIGNE}
+
+\textbf{calcul à la main de la transformée de Radon d'un disque : }
+Soit $S$ la surface du disque unité, défini par la relation : \[S=\{(x,y)\in \Re^2|x^2+y^2<1\}\]
+soit $f :\left\{\begin{array}{lcl}
+Re^2 \to \Re \\
+(x,y) \mapsto \left\{ \begin{array}{lcl}
+&x^2+y^2 &si |x|\leq 1 \wedge |y|\leq 1 \\
+&0 &sinon (|x|>1 \lor |y|>1)
+\end{array}
+\right.
+\end{array}
+\right.
+$
+\[\]
+Nous avons donc : $R(\theta, p)=\int_{-\infty}^{+\infty} p^2+q^2 \delta q$ la transformée de Radon de ce disque. On trouve facile que :
+\[p^2+q^2=1 \rightarrow q=\pm \sqrt{1-p^2} \]
+d'où par linéarité de l'intégrale dans la formule de la transformée de Radon :
+\[R(\theta,p)=\int_{-\infty}^{-\sqrt{1-p^2}} f(x,y) \delta q + \int_{-\sqrt{1-p^2}}^{+\sqrt{1-p^2}} p^2+q^2 \delta q+\int_{+\sqrt{1-p^2}}^{+\infty} p^2+q^2 \delta q \]
+l'intégrale est paire, donc elle est égale à deux fois l'intervalle de définition, ce qui donne après simplification :
+\[R(\theta,p)= \left\{\begin{array}{lcl}
+2\sqrt{1-p^2} & si |p| \leq 1 \\
+0 & sinon
+\end{array}
+\right. \]
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{transformeRadon}
+\caption[transformée de Radon d'un disque et sa projection]{transformée de Radon d'un disque et sa projection}
+\label{fig:gallery}
+\end{figure}
+
 
 \subsection{La rétroprojection filtrée}
 
-\textbf{A COMPLETER}
+
 
 
 \section{résultat de nos codes}
@@ -547,7 +580,7 @@ Ici l'image de la Fig.7 a un pas angulaire de 4. Des lignes parasites dues à un
 \label{fig:gallery}
 \end{figure}
 
-En augmentant encore le pas angulaire jusqu'à 16, on observe que l'image de la Fig.8 devient quasiment inexploitable, qu'elle perd nettement en contraste et que les lignes parasites sont encore plus nombreuses. Le PSNR chute à 6.37.
+En augmentant encore le pas angulaire jusqu'à 16, on observe que l'image de la Fig.8 devient quasiment inexploitable, qu'elle perd nettement en contraste et que les lignes parasites sont encore plus nettes. Le PSNR chute à 6.37.
 \\
 \\
 \textbf{3.2 influence de la taille : }
@@ -560,7 +593,7 @@ Observons maintenant l'influence de la taille sur sa qualité.
 \label{fig:gallery}
 \end{figure}
 
-Cette image (Fig.9) a un pas angulaire de 1 comme la Fig.6, mais à une taille plus grande de 2048 pixels. Le PSNR de 9.56 est plus bas que la Fig.6, mais cela s'explique par le fait qu'on a augmenté la taille de l'image, sans pour autant augmenter le pas angulaire, aboutissant pour un même pas angulaire à un résultat moins efficace.
+Cette image (Fig.9) a un pas angulaire de 1 comme la Fig.6, mais à une taille plus grande de 2048 pixels. Le PSNR de 9.56 est plus bas que la Fig.6, mais cela s'explique par le fait qu'on a augmenté la taille de l'image, sans pour autant diminuer le pas angulaire, aboutissant pour un même pas angulaire à un résultat moins efficace.
 \\
 \\
 \textbf{Optimisation en fonction de la taille et du pas : }
@@ -568,7 +601,7 @@ Pour voir l'influence de ces paramètres, nous avons calculé le PSNR sur 1000 i
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.35]{PSNR2}
+\includegraphics[scale=0.13]{PSNR2}
 	\caption[PSNR en fonction du pas]{PSNR en fonction du pas}
 \label{fig:gallery}
 \end{figure}
@@ -577,23 +610,23 @@ La Fig.10 montre la variation du PSNR d'une image de 256 pixels en fonction du p
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.3]{PSNR3}
+\includegraphics[scale=0.13]{PSNR3}
 	\caption[PSNR en fonction de la taille]{PSNR en fonction de la taille}
 \label{fig:gallery}
 \end{figure}
 
-La Fig.11 permet d'observer que le PSNR diminue légèrement avec l'augmentation de la taille de l'image pour un pas fixe de 1. Pour les images les plus petites, le PSNR n'a pas de réel sens, car les images sont tellement petites que la variation angulaire n'a plus de sens.
+La Fig.11 permet d'observer que le PSNR diminue légèrement avec l'augmentation de la taille de l'image pour un pas fixe de 1. Pour les images les plus petites, le PSNR n'a pas de réel signification, car les images sont tellement petites que la variation angulaire n'a plus de sens.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.30]{PSNR}
+\includegraphics[scale=0.13]{PSNR1}
 	\caption[PSNR en fonction de la taille et du pas]{PSNR en fonction de la taille et du pas}
 \label{fig:gallery}
 \end{figure}
 
 Enfin nous avons fait un graphe (Fig.12) qui étudie la variation des deux paramètres à la fois. Pour plus de lisibilité, cette figure se trouve également en annexe.
  
-Le pas angulaire semble donc être le paramètre le plus sensible sur la qualité du rendu. Dès qu'on prend un pas angulaire supérieur à 1 radian, la dégradation de l'image très rapidement.
+Le pas angulaire semble donc être le paramètre le plus sensible sur la qualité du rendu. Dès qu'on prend un pas angulaire supérieur à 1 radian, l'image se dégrade très rapidement.
 
 \subsection{Notre code en langage C}
 
@@ -701,7 +734,7 @@ Le code que nous avons écrit en langage C est équivalent algorithmiquement au 
 
 \section{Conclusion}
 
-Comme expliqué dans cet article, nous avons appliqué une « rétroprojection filtrée » d’abord sur des exemples théoriques (disque) et l’avons ensuite implémentée en Matlab, puis en langage C. Enfin, notre code fut appliqué sur les fantômes de Shepp-Logann en faisant varier le pas angulaire et la dimension de l'image. Les PSNR varient pour un pas de 1 radian entre 12.41 pour une image de 64 pixels et 9.56 une image de 2048 pixels et varient pour une image à 512 pixels entre 11.28 pour un pas de 1 et 6.1 pour un pas de radian. On remarque aussi que le pas angulaire joue beaucoup plus sur l'interprétation humaine de l'image résultante que la dimension de l'image. Les temps de calculs sont prohibitifs dès que les dimensions des images calculées deviennent très importantes. En effet, pour un test sur 1000 images de 1 à 1000 pixels avec un pas variant de 1 à 90, il nous a fallu près de 8h pour effectuer l'ensemble des calculs (rétroprojection+PSNR). Notre code doit être optimisé si l'on veut l'appliquer à des images conséquentes et reste à tester sur des sinogrammes d'acquisition d'objets d'études réels. 
+Comme expliqué dans cet article, nous avons appliqué une « rétroprojection filtrée » d’abord sur des exemples théoriques (disque) et l’avons ensuite implémentée en Matlab, puis en langage C. Enfin, notre code fut appliqué sur les fantômes de Shepp-Logann en faisant varier le pas angulaire et la dimension de l'image. Les PSNR varient pour un pas de 1 radian entre 12.41 pour une image de 64 pixels et 9.56 une image de 2048 pixels et varient pour une image à 512 pixels entre 11.28 pour un pas de 1 et 6.1 pour un pas de 64 radian. On remarque aussi que le pas angulaire joue beaucoup plus sur l'interprétation humaine de l'image résultante que la dimension de l'image. Les temps de calculs sont prohibitifs dès que les dimensions des images calculées deviennent très importantes. En effet, pour un test sur 1000 images de 1 à 1000 pixels avec un pas variant de 1 à 90, il nous a fallu près de 8h pour effectuer l'ensemble des calculs (rétroprojection+PSNR). Notre code doit être optimisé si l'on veut l'appliquer à des images conséquentes et reste à tester sur des sinogrammes d'acquisition d'objets d'études réels. 
 \\
 L'étude de la tomographie et de la rétroprojection filtrée fut instructive pour nous lors de la réalisation de ce PIDR.
 
@@ -747,19 +780,60 @@ Nous tenons à remercier également M. Bombardier, professeur de Traitement Num�
 \begin{thebibliography}{1}
 
 \bibitem{IEEEhowto:kopka}
-Papa et Maman, \emph{Notre Fils est génial !! \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Paris, France: ..., 2017
+F.Dubois, \emph{Reconstruction des images tomographiques par rétroprojection filtrée}, CHU Saint Etienne, Revue de l'ACOMEN, vol 4, numéro 2 \hskip 1em plus
+  0.5em minus 0.4em\relax Saint Etienne, France: 1998
+\bibitem{IEEEhowto:kopka}
+Blanc JY, Clément B, Von der Hardt P, \emph{Fuel bundle examination techniques for the Phebus Fission Product Test}, IAEA TCM on behaviour of LWR Core Materials under Accident Conditions.\hskip 1em plus
+  0.5em minus 0.4em\relax Dimitrovgrad, Russia : 9-13 Oct., 1995 (\url{http://www.iaea.org/inis/collection/NCLCollectionStore/_Public/28/023/28023810.pdf})
+\bibitem{IEEEhowto:kopka}
+Isabelle BLOCH, \emph{Reconstruction d'images de tomographie}, Télécom ParisTech \hskip 1em plus
+  0.5em minus 0.4em\relax France (\url{Isabelle.Bloch@enst.fr})
+\bibitem{IEEEhowto:kopka}
+Pol Grasland-Mongrain, \emph{Le principe de la tomographie}\hskip 1em plus
+  0.5em minus 0.4em\relax France : 1 Mai 2014,(\url{http://polgm.free.fr/petitescuriesdunet/index.php?post/2014/04/Le-principe-de-tomographie})
+\bibitem{IEEEhowto:kopka}
+Irène Buvat, \emph{Reconstruction tomographique}\hskip 1em plus
+  0.5em minus 0.4em\relax France : Mars 2011, (\url{file:///C:/Users/Pierre-Arnaud/Downloads/DESMNRecon_2011.pdf})
+\bibitem{IEEEhowto:kopka}
+L.Desbat, \emph{Le scanner médical, la tomographie}\hskip 1em plus
+  0.5em minus 0.4em\relax TIMC-IMAG, UJF : 2004
+\bibitem{IEEEhowto:kopka}
+Matteo Frigo, Steven G.Johnson, \emph{FFTW}, version 3.3.6-pl1 \hskip 1em plus
+  0.5em minus 0.4em\relax 15 Janv. 2017 (\url{http://www.fftw.org/fftw3.pdf})
+\bibitem{IEEEhowto:kopka}
+Pham Trong Tôn, tuteur : Dr.Nguyen Dinh Thuc, \emph{La transformation de Radon et son application en traitement de la radiographie pulmonaire} \hskip 1em plus
+  0.5em minus 0.4em\relax Ho Chi Minh ville, Vietman : Juillet 2004
+\bibitem{IEEEhowto:kopka}
+Irène Buvat, \emph{Rétroprojection filtrée et reconstruction itérative}, U494 INSERM, Paris \hskip 1em plus
+  0.5em minus 0.4em\relax Paris, France : 8 Janv. 2002 (\url{http://www.guillemet.org/irene/coursem/APRAMENrecon.pdf}) 
+
 
 \end{thebibliography}
 
-
+\newpage
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{PSNR}
+\includegraphics[scale=0.40, angle=-90]{PSNR1}
 	\caption[PSNR en fonction de la taille et du pas]{PSNR en fonction de la taille et du pas}
 \label{fig:gallery}
 \end{figure}
-\textbf{TODO : A mettre à la verticale et meuilleur qualité}
+
+\newpage $ $
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.40, angle=-90]{PSNR2}
+	\caption[PSNR en fonction de la taille et du pas]{PSNR en fonction de la taille et du pas}
+\label{fig:gallery}
+\end{figure}
+
+\newpage $ $
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.40, angle=-90]{PSNR3}
+	\caption[PSNR en fonction de la taille et du pas]{PSNR en fonction de la taille et du pas}
+\label{fig:gallery}
+\end{figure}
 
 
 
