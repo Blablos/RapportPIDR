@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.10)  15 MAY 2017 11:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.10)  16 MAY 2017 14:12
 entering extended mode
 **./templateIEEE_PIDR.tex
 (templateIEEE_PIDR.tex
@@ -468,6 +468,9 @@ LaTeX Warning: Label `fig:gallery' multiply defined.
 LaTeX Warning: Label `fig:gallery' multiply defined.
 
 
+LaTeX Warning: Label `fig:gallery' multiply defined.
+
+
 LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
 
 
@@ -552,36 +555,45 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 381.
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 []\OT1/ptm/b/n/10 Mots-cl[]es : \OT1/ptm/m/n/10 tomographie, trans-form[]ee de 
 Ra-don,
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 421.
 
-Underfull \hbox (badness 3128) in paragraph at lines 406--417
+Underfull \hbox (badness 3128) in paragraph at lines 408--422
 []\OT1/ptm/b/n/10 Contexte g[]en[]eral : \OT1/ptm/m/n/10 La tomographie, qui ve
 ut dire
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 406--417
+Underfull \hbox (badness 1881) in paragraph at lines 408--422
 \OT1/ptm/m/n/10 et les m[]ethodes de re-cons-truc-tions math[]ematiques exis-
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 423.
 [1{C:/Users/Pierre-Arnaud/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-<sinogrammeExemple.png, id=16, 410.53375pt x 464.73625pt>
+<Balayage.png, id=11, 496.10344pt x 403.5075pt>
+File: Balayage.png Graphic file (type png)
+ <use Balayage.png>
+Package pdftex.def Info: Balayage.png used on input line 448.
+(pdftex.def)             Requested size: 198.43785pt x 161.40013pt.
+
+Underfull \vbox (badness 1540) has occurred while \output is active []
+
+
+<sinogrammeExemple.png, id=13, 410.53375pt x 464.73625pt>
 File: sinogrammeExemple.png Graphic file (type png)
 
 <use sinogrammeExemple.png>
-Package pdftex.def Info: sinogrammeExemple.png used on input line 439.
+Package pdftex.def Info: sinogrammeExemple.png used on input line 459.
 (pdftex.def)             Requested size: 164.21059pt x 185.8912pt.
 
-Overfull \hbox (8.73856pt too wide) detected at line 446
+Overfull \hbox (8.73856pt too wide) detected at line 466
 \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ](\OML/cmm
 /m/it/10 u; \OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 u\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m
@@ -590,219 +602,200 @@ m/it/10 u\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m
  []
 
 
-Overfull \hbox (11.39766pt too wide) in paragraph at lines 452--463
+Overfull \hbox (11.39766pt too wide) in paragraph at lines 470--481
 \OT1/ptm/m/n/10 soit $\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 : []$ 
  []
 
-
-Overfull \hbox (48.46925pt too wide) detected at line 467
-\OML/cmm/m/it/10 R\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; p\OT1/cmr/m/n/10 ) = [][
-] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 )\OML
-/cmm/m/it/10 q \OT1/cmr/m/n/10 + [][] \OML/cmm/m/it/10 p[] \OT1/cmr/m/n/10 + \
-OML/cmm/m/it/10 q[]q \OT1/cmr/m/n/10 + [][] \OML/cmm/m/it/10 p[] \OT1/cmr/m/n/
-10 + \OML/cmm/m/it/10 q[]q
- []
-
-<transformeRadon.png, id=17, 440.39531pt x 489.32813pt>
+[2 <./Balayage.png> <./sinogrammeExemple.png (PNG copy)>]
+<transformeRadon.png, id=25, 440.39531pt x 489.32813pt>
 File: transformeRadon.png Graphic file (type png)
 
 <use transformeRadon.png>
-Package pdftex.def Info: transformeRadon.png used on input line 477.
+Package pdftex.def Info: transformeRadon.png used on input line 498.
 (pdftex.def)             Requested size: 176.155pt x 195.72777pt.
- <Shepp-logan.jpg, id=18, 332.74312pt x 277.78781pt>
+ <Shepp-logan.jpg, id=26, 332.74312pt x 277.78781pt>
 File: Shepp-logan.jpg Graphic file (type jpg)
 
 <use Shepp-logan.jpg>
-Package pdftex.def Info: Shepp-logan.jpg used on input line 498.
+Package pdftex.def Info: Shepp-logan.jpg used on input line 526.
 (pdftex.def)             Requested size: 232.91858pt x 194.45012pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <./sinogrammeExemple.png (PNG copy)> <./transformeRadon.png>]
-<sinogramme.jpg, id=25, 526.96875pt x 395.22656pt>
+ <sinogramme.jpg, id=27, 526.96875pt x 395.22656pt>
 File: sinogramme.jpg Graphic file (type jpg)
- <use sinogramme.jpg>
-Package pdftex.def Info: sinogramme.jpg used on input line 508.
+
+<use sinogramme.jpg>
+Package pdftex.def Info: sinogramme.jpg used on input line 536.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 
-Overfull \hbox (11.48372pt too wide) in paragraph at lines 508--509
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 536--537
  [][] 
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 517--518
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./transformeRadon.png> <./Shepp-logan.jpg>]
+Underfull \hbox (badness 1430) in paragraph at lines 545--546
  \OT1/ptm/m/it/10 2) r[]etroprojection discr[]ete : [][] \OT1/ptm/b/n/10 Filtre
  de l'image : \OT1/ptm/m/n/10 La
  []
 
-<filtre-de-Ram-Lak.jpg, id=26, 526.96875pt x 395.22656pt>
+<filtre-de-Ram-Lak.jpg, id=32, 526.96875pt x 395.22656pt>
 File: filtre-de-Ram-Lak.jpg Graphic file (type jpg)
 
 <use filtre-de-Ram-Lak.jpg>
-Package pdftex.def Info: filtre-de-Ram-Lak.jpg used on input line 521.
+Package pdftex.def Info: filtre-de-Ram-Lak.jpg used on input line 549.
 (pdftex.def)             Requested size: 210.78375pt x 158.08781pt.
 
-<rsultat-de-la-rtroprojetion-filtre.jpg, id=27, 526.96875pt x 395.22656pt>
+<rsultat-de-la-rtroprojetion-filtre.jpg, id=33, 526.96875pt x 395.22656pt>
 File: rsultat-de-la-rtroprojetion-filtre.jpg Graphic file (type jpg)
 
 <use rsultat-de-la-rtroprojetion-filtre.jpg>
 Package pdftex.def Info: rsultat-de-la-rtroprojetion-filtre.jpg used on input l
-ine 539.
+ine 567.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 
-Overfull \hbox (11.48372pt too wide) in paragraph at lines 539--540
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 567--568
  [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./Shepp-logan.jpg> <./sinogramme.jpg> <./filtre-de-Ram-Lak.jpg>]
-<t512-p1.jpg, id=31, 526.96875pt x 395.22656pt>
+<t512-p1.jpg, id=34, 526.96875pt x 395.22656pt>
 File: t512-p1.jpg Graphic file (type jpg)
  <use t512-p1.jpg>
-Package pdftex.def Info: t512-p1.jpg used on input line 557.
+Package pdftex.def Info: t512-p1.jpg used on input line 585.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 
-Overfull \hbox (11.48372pt too wide) in paragraph at lines 557--558
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 585--586
  [][] 
  []
 
-<t512-p4.jpg, id=32, 526.96875pt x 395.22656pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./sinogramme.jpg> <./filtre-de-Ram-Lak.jpg> <./rsultat-de-la-rtroprojetion
+-filtre.jpg>] <t512-p4.jpg, id=38, 526.96875pt x 395.22656pt>
 File: t512-p4.jpg Graphic file (type jpg)
  <use t512-p4.jpg>
-Package pdftex.def Info: t512-p4.jpg used on input line 569.
+Package pdftex.def Info: t512-p4.jpg used on input line 597.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 
-Overfull \hbox (11.48372pt too wide) in paragraph at lines 569--570
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 597--598
  [][] 
  []
 
-<t512-p16.jpg, id=33, 526.96875pt x 395.22656pt>
+<t512-p16.jpg, id=39, 526.96875pt x 395.22656pt>
 File: t512-p16.jpg Graphic file (type jpg)
  <use t512-p16.jpg>
-Package pdftex.def Info: t512-p16.jpg used on input line 578.
+Package pdftex.def Info: t512-p16.jpg used on input line 606.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 
-Overfull \hbox (11.48372pt too wide) in paragraph at lines 578--579
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 606--607
  [][] 
  []
 
-
-Underfull \hbox (badness 3209) in paragraph at lines 583--588
-[]\OT1/ptm/m/n/10 En aug-men-tant en-core le pas an-gu-laire jus-qu'[]a 16,
- []
-
-
-Underfull \hbox (badness 1603) in paragraph at lines 583--588
-\OT1/ptm/m/n/10 on ob-serve que l'image de la Fig.8 de-vient qua-si-ment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 583--588
-
- []
-
-<t2048-p1.jpg, id=34, 526.96875pt x 395.22656pt>
-File: t2048-p1.jpg Graphic file (type jpg)
- <use t2048-p1.jpg>
-Package pdftex.def Info: t2048-p1.jpg used on input line 591.
-(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-
-Overfull \hbox (11.48372pt too wide) in paragraph at lines 591--592
- [][] 
- []
-
-[4 <./rsultat-de-la-rtroprojetion-filtre.jpg> <./t512-p1.jpg> <./t512-p4.jpg> <
-./t512-p16.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 596--601
-
- []
-
-
-Underfull \hbox (badness 1867) in paragraph at lines 596--601
-\OT1/ptm/b/n/10 Optimisation en fonc-tion de la taille et du pas :
- []
-
-<PSNR2.jpg, id=38, 1909.1325pt x 971.63pt>
-File: PSNR2.jpg Graphic file (type jpg)
- <use PSNR2.jpg>
-Package pdftex.def Info: PSNR2.jpg used on input line 604.
-(pdftex.def)             Requested size: 248.19594pt x 126.31633pt.
-
-<PSNR3.jpg, id=39, 1909.1325pt x 971.63pt>
-File: PSNR3.jpg Graphic file (type jpg)
- <use PSNR3.jpg>
-Package pdftex.def Info: PSNR3.jpg used on input line 613.
-(pdftex.def)             Requested size: 248.19594pt x 126.31633pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 2635) in paragraph at lines 618--619
-[]\OT1/ptm/m/n/10 La Fig.11 per-met d'ob-ser-ver que le PSNR di-mi-nue
+Underfull \hbox (badness 10000) in paragraph at lines 613--618
+
  []
 
-<PSNR1.jpg, id=40, 1909.1325pt x 971.63pt>
+<t2048-p1.jpg, id=40, 526.96875pt x 395.22656pt>
+File: t2048-p1.jpg Graphic file (type jpg)
+ <use t2048-p1.jpg>
+Package pdftex.def Info: t2048-p1.jpg used on input line 621.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+
+Overfull \hbox (11.48372pt too wide) in paragraph at lines 621--622
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--631
+
+ []
+
+[5 <./t512-p1.jpg> <./t512-p4.jpg> <./t512-p16.jpg> <./t2048-p1.jpg>]
+<PSNR_en_fonction_du_pas_angulaire.jpg, id=44, 702.625pt x 526.96875pt>
+File: PSNR_en_fonction_du_pas_angulaire.jpg Graphic file (type jpg)
+
+<use PSNR_en_fonction_du_pas_angulaire.jpg>
+Package pdftex.def Info: PSNR_en_fonction_du_pas_angulaire.jpg used on input li
+ne 634.
+(pdftex.def)             Requested size: 210.78912pt x 158.09184pt.
+
+<PSNR3.jpg, id=45, 1909.1325pt x 971.63pt>
+File: PSNR3.jpg Graphic file (type jpg)
+ <use PSNR3.jpg>
+Package pdftex.def Info: PSNR3.jpg used on input line 643.
+(pdftex.def)             Requested size: 248.19594pt x 126.31633pt.
+
+Underfull \hbox (badness 2635) in paragraph at lines 648--649
+[]\OT1/ptm/m/n/10 La Fig.13 per-met d'ob-ser-ver que le PSNR di-mi-nue
+ []
+
+<PSNR1.jpg, id=46, 1909.1325pt x 971.63pt>
 File: PSNR1.jpg Graphic file (type jpg)
  <use PSNR1.jpg>
-Package pdftex.def Info: PSNR1.jpg used on input line 622.
+Package pdftex.def Info: PSNR1.jpg used on input line 652.
 (pdftex.def)             Requested size: 248.19594pt x 126.31633pt.
- [5 <./t2048-p1.jpg> <./PSNR2.jpg> <./PSNR3.jpg> <./PSNR1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 752--756
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./PSNR_en_fonction_du_pas_angulaire.jpg> <./PSNR3.jpg> <./PSNR1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 808--812
 
  []
 
 
-Underfull \hbox (badness 7944) in paragraph at lines 752--756
+Underfull \hbox (badness 7944) in paragraph at lines 808--812
 \OT1/ptm/m/n/10 Nous te-nons []a re-mer-cier []egalement M. Bom-bar-dier,
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 787.
-[6]
+(Font)              <8> on input line 841.
+[7]
 File: PSNR1.jpg Graphic file (type jpg)
  <use PSNR1.jpg>
-Package pdftex.def Info: PSNR1.jpg used on input line 816.
+Package pdftex.def Info: PSNR1.jpg used on input line 874.
 (pdftex.def)             Requested size: 763.63948pt x 388.64511pt.
 
-Overfull \hbox (136.64511pt too wide) in paragraph at lines 816--817
+Overfull \hbox (136.64511pt too wide) in paragraph at lines 874--875
  [][] 
  []
 
 
 Overfull \vbox (108.42735pt too high) has occurred while \output is active []
 
-File: PSNR2.jpg Graphic file (type jpg)
 
-<use PSNR2.jpg>
-Package pdftex.def Info: PSNR2.jpg used on input line 825.
-(pdftex.def)             Requested size: 763.63948pt x 388.64511pt.
+[8]
+File: PSNR_en_fonction_du_pas_angulaire.jpg Graphic file (type jpg)
+ <use PSNR_en_fonction_du_pas_angulaire.jpg>
+Package pdftex.def Info: PSNR_en_fonction_du_pas_angulaire.jpg used on input li
+ne 884.
+(pdftex.def)             Requested size: 702.62328pt x 526.96745pt.
 
-Overfull \hbox (136.64511pt too wide) in paragraph at lines 825--826
+Overfull \hbox (274.96745pt too wide) in paragraph at lines 884--885
  [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-Overfull \vbox (108.42735pt too high) has occurred while \output is active []
+Overfull \vbox (47.41115pt too high) has occurred while \output is active []
 
 File: PSNR3.jpg Graphic file (type jpg)
 
 <use PSNR3.jpg>
-Package pdftex.def Info: PSNR3.jpg used on input line 833.
+Package pdftex.def Info: PSNR3.jpg used on input line 892.
 (pdftex.def)             Requested size: 763.63948pt x 388.64511pt.
 
-Overfull \hbox (136.64511pt too wide) in paragraph at lines 833--834
+Overfull \hbox (136.64511pt too wide) in paragraph at lines 892--893
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
+ [9]
 Overfull \vbox (108.42735pt too high) has occurred while \output is active []
 
 
@@ -817,7 +810,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[9
+[10
 
 ] (templateIEEE_PIDR.aux)
 
@@ -825,13 +818,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3470 strings out of 493634
- 52338 string characters out of 3141289
- 127859 words of memory out of 3000000
- 6824 multiletter control sequences out of 15000+200000
+ 3476 strings out of 493634
+ 52565 string characters out of 3141289
+ 130860 words of memory out of 3000000
+ 6829 multiletter control sequences out of 15000+200000
  39709 words of font info for 75 fonts, out of 3000000 for 9000
  1029 hyphenation exceptions out of 8191
- 28i,14n,30p,1194b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,14n,30p,1266b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
@@ -846,9 +839,9 @@ onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utm
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on templateIEEE_PIDR.pdf (9 pages, 1281704 bytes).
+Output written on templateIEEE_PIDR.pdf (10 pages, 1313564 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
